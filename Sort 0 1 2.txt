@@ -1,0 +1,23 @@
+#include <bits/stdc++.h> 
+void sort012(int *arr, int n)
+{
+   //   Write your code here
+   int fre[3] = {0};
+   for(int i=0;i<n;i++){
+      if(arr[i]==0){
+         fre[0]++;
+      }
+      if(arr[i]==1){
+         fre[1]++;
+      }
+      if(arr[i]==2){
+         fre[2]++;
+      }
+   }
+   int j=0;
+   for(int i=0;i<3;i++){
+      while(fre[i]--){
+        arr[j++]=i;
+      }
+   }
+}
